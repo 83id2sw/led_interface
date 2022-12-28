@@ -1,9 +1,8 @@
 import customtkinter
 import RPi.GPIO as GPIO
-import time
 
 GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BCM) #выбор другой нумерации выводов
 GPIO.setup(6, GPIO.OUT) #green led
 GPIO.setup(5, GPIO.OUT) #blue led
 GPIO.setup(8, GPIO.OUT) #red led
