@@ -1,8 +1,5 @@
-from time import sleep
-import os, sys
 import RPi.GPIO as GPIO
 import paho.mqtt.client as paho
-import urlparse3
 
 
 GPIO.setwarnings(False)
@@ -54,6 +51,5 @@ mqttc.connect('192.168.5.18', 1883)
 rc = 0
 while True:
     while rc == 0:
-        import time
         rc = mqttc.loop()
     print("rc: " + str(rc))
